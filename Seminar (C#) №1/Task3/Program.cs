@@ -10,5 +10,4 @@ while (numberMinus<number)
 if(numberMinus == number)
     {
         Console.Write(numberMinus);
-        numberMinus++;
     }
