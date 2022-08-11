@@ -10,5 +10,5 @@ int Multiplicity(int num1, int num2)
 }
 
 int result = Multiplicity(number1, number2);
-if (result == 0) System.Console.WriteLine($"Ваше число {number1} делиться на {number2} без остатка -> оно кратно");
-else System.Console.WriteLine($"Ваше число {number1} не делиться на {number2} без остатка -> оно не кратно, остаток -> {result}");
+if (result == 0) System.Console.WriteLine($"Число {number2} кратно числу {number1}");
+else System.Console.WriteLine($"Число {number2} не кратно числу {number1} , остаток -> {result}");
