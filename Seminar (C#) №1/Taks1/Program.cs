@@ -10,3 +10,4 @@ else
 {
     System.Console.WriteLine($"{number1} не является квардратом {number2}");
 }
+123
