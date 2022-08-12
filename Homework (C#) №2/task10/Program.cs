@@ -7,10 +7,10 @@
 
 System.Console.Write("Введите трехзначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
-int result = 0;
-if (number < 1000 && number > 99)
+int result = Math.Abs(number);
+if (result < 1000 && result > 99)
 {
-    result = number / 10 % 10;
+    result = result / 10 % 10;
     System.Console.WriteLine($"Ваша средняя цифра числа {number} -> {result}");
 }
 else System.Console.WriteLine($"Вы ввели не трехзначное число");
