@@ -12,12 +12,12 @@ void CalcTable(int num)
     {
         for (int i = 1; i <= num; i++)
         {
-            System.Console.WriteLine($"{i}\t{i * i * i}");
+            System.Console.WriteLine($"{i,2}\t{i * i * i,3}");
         }
     }
     else if (num < 0)
     {
-        for (int i = 0; i >= num; i--)
+        for (int i = -1; i >= num; i--)
         {
             System.Console.WriteLine($"{i}\t{i * i * i}");
         }

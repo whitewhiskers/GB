@@ -17,6 +17,7 @@ System.Console.Write("Введите вторую координату втор�
 int y2 = int.Parse(Console.ReadLine());
 System.Console.Write("Введите третью координату второй точки: ");
 int z2 = int.Parse(Console.ReadLine());
+Console.Clear();
 System.Console.WriteLine($"Ваши точки ({x1},{y1},{z1}) и ({x2},{y2},{z2})");
 double CalculationDistance(int xc1, int yc1, int zc1, int xc2, int yc2, int zc2)
 {
