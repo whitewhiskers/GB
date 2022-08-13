@@ -4,7 +4,7 @@
 // 5 -> 1, 8, 27, 64, 125
 
 Console.Clear();
-System.Console.Write("Введите ваше число:");
+System.Console.Write("Введите ваше число: ");
 int number = int.Parse(Console.ReadLine());
 void CalcTable(int num)
 {
