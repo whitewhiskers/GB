@@ -3,6 +3,7 @@
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
+Console.Clear();
 System.Console.Write("Введите первое число: ");
 int number1 = Convert.ToInt32(Console.ReadLine());
 System.Console.Write("Введите второе число: ");

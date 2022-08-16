@@ -4,6 +4,7 @@
 // 82 -> 10
 // 9012 -> 12
 
+Console.Clear();
 System.Console.Write("Введите ваше число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
