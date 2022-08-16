@@ -7,18 +7,17 @@
 
 
 Console.Clear();
-int number = 8;
 int[] GetArray(int size)
 {
     int[] array = new int[size];
     Random rnd = new Random();
     for (int i = 0; i < size; i++)
     {
-        array[i] = rnd.Next();
+        array[i] = rnd.Next(1,21);
     }
     return array;
 }
-int[] result = GetArray(number);
+int[] result = GetArray(8);
 void PrintArray(int[] array)
 {
     Console.Write("[");
@@ -28,6 +27,7 @@ void PrintArray(int[] array)
     }
     Console.Write($"{array[array.Length - 1]}]");
 }
+System.Console.Write("Ваш массив -> ");
 PrintArray(result);
 
 //Вариант с указанием размера и диапазона значений
