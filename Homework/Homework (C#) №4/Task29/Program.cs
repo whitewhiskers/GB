@@ -30,7 +30,7 @@ void PrintArray(int[] array)
 System.Console.Write("Ваш массив -> ");
 PrintArray(result);
 
-//Вариант с указанием размера и диапазона значений
+// Вариант с указанием размера и диапазона значений
 
 // Console.Clear();
 // Console.Write("Введите число элементов массива: ");
@@ -73,5 +73,5 @@ PrintArray(result);
 //     }
 //     Console.Write($"{array[array.Length - 1]}]");
 // }
-
+// System.Console.Write("Ваш массив -> ");
 // PrintArray(result);
