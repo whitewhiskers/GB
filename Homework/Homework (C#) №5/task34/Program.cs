@@ -23,19 +23,19 @@ void PrintArray(int[] arr)
     }
     System.Console.Write("]");
 }
-int CheckEvenNumbers(int [] arr)
+int CheckEvenNumbers(int[] arr)
 {
-    int count = 0;  
+    int count = 0;
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] % 2 == 0) count++; 
+        if (arr[i] % 2 == 0) count++;
     }
     return count;
 }
 Console.Clear();
 System.Console.Write("Введите длину массива = ");
 int number = int.Parse(Console.ReadLine());
-int [] array = FillArray(number);
+int[] array = FillArray(number);
 int countEvenNumbers = CheckEvenNumbers(array);
 PrintArray(array);
 System.Console.Write(" -> ");

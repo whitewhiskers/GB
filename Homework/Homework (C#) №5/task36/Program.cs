@@ -35,7 +35,7 @@ int SumEvenIndex(int[] arr)
 Console.Clear();
 System.Console.Write("Введите длину массива = ");
 int number = int.Parse(Console.ReadLine());
-int [] array = FillArray(number);
+int[] array = FillArray(number);
 int sumEven = SumEvenIndex(array);
 PrintArray(array);
 System.Console.Write(" -> ");
