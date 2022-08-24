@@ -18,15 +18,11 @@ void PrintArray(int[] arr)
     }
     System.Console.WriteLine("]");
 }
+
 int[] array = FillArray(12);
-int sumPlus = 0;
-int sumMinus = 0;
+PrintArray(array);
 for (int i = 0; i < array.Length; i++)
 {
-    if (array[i] < 0) sumMinus += array[i];
-    else sumPlus += array[i];
+    array[i] = -array[i];
 }
-
 PrintArray(array);
-System.Console.WriteLine($"Сумма положительных чисел = {sumPlus}");
-System.Console.WriteLine($"Сумма отрицательных чисел = {sumMinus}");
