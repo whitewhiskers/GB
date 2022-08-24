@@ -16,36 +16,26 @@ void PrintArray(int[] arr)
         if (i < arr.Length - 1) System.Console.Write($"{arr[i]},");
         else System.Console.Write($"{arr[i]}");
     }
-    System.Console.WriteLine("]");
+    System.Console.Write("]");
 }
-int[] MyltiplPairNum(int[] arr)
+int[] MyltiplyPairNum(int[] arr)
 {
-    if (arr.Length % 2 == 0)
+    int size = arr.Length / 2;
+    if (arr.Length % 2 != 0) size++;
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
     {
-        int[] array = new int[arr.Length / 2];
-        int l = -1;
-        for (int i = 0; i < arr.Length / 2; i++)
-        {
-            array[i] = arr[i] * arr[arr.Length + l];
-            l--;
-        }
-        return array;
+        array[i] = arr[i] * arr[arr.Length -i -1];
     }
-    else
-    { 
-        int[] array = new int[arr.Length / 2 +1];
-        int l = -1;
-        for (int i = 0; i < arr.Length / 2; i++)
-        {
-            array[i] = arr[i] * arr[arr.Length + l];
-            l--;
-        }
-        array[array.Length-1] = arr[arr.Length / 2];
-        return array;
-    }
+    if (arr.Length % 2 != 0) array[array.Length - 1] = arr[arr.Length / 2];
+    return array;
+
 }
-int[] array = FillArray(3);
+System.Console.Write("Введите длину массива = ");
+int number = int.Parse(Console.ReadLine());
+int[] array = FillArray(number);
 PrintArray(array);
-int[] array2 = MyltiplPairNum(array);
+int[] array2 = MyltiplyPairNum(array);
+System.Console.Write(" -> ");
 PrintArray(array2);
 
