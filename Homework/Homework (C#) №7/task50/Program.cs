@@ -50,4 +50,4 @@ if (numStr > array.GetLength(0) || numStb > array.GetLength(1))
     System.Console.WriteLine("Такого элемента в массиве нет");
     return;
 }
-System.Console.Write($"Значение вашего элемента c индексом {numStr},{numStb} -> {array[numStr-1,numStb-1]}");
+System.Console.Write($"Значение вашего элемента c позицией {numStr},{numStb} -> {array[numStr-1,numStb-1]}");
