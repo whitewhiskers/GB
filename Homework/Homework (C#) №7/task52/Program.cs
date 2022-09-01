@@ -10,7 +10,7 @@ void ArithmeticMean(int[,] arr)
 {
     double sum = 0;
     double result = 0;
-    System.Console.Write("Среднее арифметическое каждого столбца -> ");
+    System.Console.Write("Среднее арифметическое каждого столбца: ");
     for (int i = 0; i < arr.GetLength(1); i++)
     {
         for (int j = 0; j < arr.GetLength(0); j++)
@@ -18,7 +18,8 @@ void ArithmeticMean(int[,] arr)
             sum = sum + arr[j, i];
         }
         result = Math.Round(sum / arr.GetLength(0), 1);
-        System.Console.Write($"{result} ");
+        if (i < arr.GetLength(1)-1) System.Console.Write($"{result}; ");
+        else System.Console.Write($"{result}.");
         sum = 0;
         result = 0;
     }
