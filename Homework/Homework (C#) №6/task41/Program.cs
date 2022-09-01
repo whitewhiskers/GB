@@ -4,7 +4,7 @@
 // -1, -7, 567, 89, 223-> 3
 
 Console.Clear();
-System.Console.Write("Введите количество чисел которые будите вводить:  ");
+System.Console.Write("Введите количество чисел которые будете вводить:  ");
 int countPos = 0;
 int count = int.Parse(Console.ReadLine());
 for (int i = 1; i <= count; i++)
