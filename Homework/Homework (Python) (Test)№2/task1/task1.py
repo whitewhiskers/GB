@@ -6,14 +6,9 @@
 
 number = int(input('Введите число n: '))
 i = 1
-print(f"Для n = {number}: "'{',end="")
+d = {}
 while (i < number+1):
-    if i < number:
-        result = 3*i+1
-        print (f"{i}: {result}, ",end="")
-        i += 1
-    else:
-        result = 3*i+1
-        print (f"{i}: {result}",end="")
-        i += 1
-print("}",end="")
+    result = 3*i+1
+    d[i] = result
+    i+=1
+print(f"Для n = {number}: {d}")
