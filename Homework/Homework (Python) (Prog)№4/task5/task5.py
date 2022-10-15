@@ -6,8 +6,8 @@
 # Результат:
 # 40x⁹ - x⁸ -5x⁷ + 15x⁶ +5x⁴ + 5x³ + x² - 13x¹ + 53 = 0
 
-# - 16x**9 + 88x**6 + 72x**11 + 64x**15 + 12x**13 + 42x**5 - 38x**4 - 58x**3 + x**22 - 64x**1 - 31 = 0
-# 72x**10 + 61x**23 - x**25 - 38x**5 - 94x**4 + 61x**3 - 73x**2 + 86x**1 - 25 = 0
+# - 16x^9 + 88x^6 + 72x^11 + 64x^15 + 12x^13 + 42x^5 - 38x^4 - 58x^3 + x^22 - 64x^1 - 31 = 0
+# 72x^10 + 61x^23 - x^25 - 38x^5 - 94x^4 + 61x^3 - 73x^2 + 86x^1 - 25 = 0
 
 
 from dataclasses import replace
@@ -20,7 +20,7 @@ def GetDict (x):
         i-= 2
     return dictFirst
 def ReplaceValue(x):
-    x = x.replace('- ', '-').replace('+ ', '+').replace('**', ' ').replace('-x', '-1').replace('+x', '+1').replace('*x', '').replace('x', '')
+    x = x.replace('- ', '-').replace('+ ', '+').replace('^', ' ').replace('-x', '-1').replace('+x', '+1').replace('*x', '').replace('x', '')
     b = x.split(" ")
     return b
 def FindMaxValueKey(list):
@@ -50,21 +50,21 @@ i = maxI
 count = 1
 while i != 0:
     if dictFinal[i] != 0 and count == 1 and dictFinal[i] != 1 and dictFinal[i] != -1:
-        stringFinal += f"{(dictFinal[i])}x**{i} "
+        stringFinal += f"{(dictFinal[i])}x^{i} "
         count+=1
     elif dictFinal[i] == 1 and count == 1:
-        stringFinal += f"x**{i} "
+        stringFinal += f"x^{i} "
         count+=1
     elif dictFinal[i] == -1:
-        stringFinal += f"- x**{i} "
+        stringFinal += f"- x^{i} "
         count+=1
     elif dictFinal[i] == 1:
-        stringFinal += f"+ x**{i} "
+        stringFinal += f"+ x^{i} "
         count+=1
     elif dictFinal[i] != 0 and dictFinal[i] < 0 :
-        stringFinal += f"- {abs(dictFinal[i])}x**{i} "
+        stringFinal += f"- {abs(dictFinal[i])}x^{i} "
     elif dictFinal[i] != 0 and dictFinal[i] > 0 :
-        stringFinal += f"+ {abs(dictFinal[i])}x**{i} "
+        stringFinal += f"+ {abs(dictFinal[i])}x^{i} "
     i-=1
 c = int(a[-3])+int(b[-3])
 if c < 0: stringFinal += f"- {abs(c)}"
