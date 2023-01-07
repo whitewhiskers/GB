@@ -33,6 +33,7 @@ elif rand < 0:
     string += f"- {abs(rand)} = 0"
 else: string += "= 0"
 
-with open ('Complete.txt', 'w') as f:
+with open ('Complete.txt', 'a') as f:
     f.write(string)
+    f.write("\n")
     
